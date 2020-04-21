@@ -1,55 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Você é fã mesmo de harry potter? </title>
+<head><title>Descubra o quanto você realmente é fã de Harry Potter!</title>
+<meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Descubra o quanto você realmente é fã de Harry Potter!" />
+<meta property="og:description" content="Responda as 10 perguntas sobre Harry Potter e saiba!" />
+<meta property="og:image"content="img/ask" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script data-ad-client="ca-pub-8115362526396630" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <meta charset="utf-8" />
-<style>
-.loko{
-position:relative;}
-body{
-background-color:#0d5acc;
-}
-.text{
-color:pink;
-}
-.table{
-padding-left:20px;
-background-color: red;
-}
-.botao{
-background:transparent;
-padding-left:20px;
-margin-left:25%;
-text-transform:uppercase;
-border-color:grey;
-}
-.botao a{
-color:black;
-}
-</style>
+
 <body>
-<img class="ask" src="ask.png">
-<table div="table">
-<text class="text"><pre><font-face="Beaut for LOL">Qual o nome completo do pai de Snape?
 
-<a><input type="radio" name="opcao" value="selectA"> Tobias Snape<br>
-<input type="radio" name="opcao" value="selectA"> Paulo Snape<br></a>
-</text>
-</table>
-<div class="botao">
-<button class="botao"><a align="left" href="#"><h5>Confirmar respostas</h5></a></button>
-</div>
-
-<script type="text/javascript" language="javascript">
+<script  type="text/javascript" language="javascript">
 
     var inicio=confirm('Bem-Vindo ao QuizHP Voce tem certeza de que quer participar?');
     var sair = "<html><head><title>Voce não quis participar </title></head><body>Você não quis participar :(<br></body></html>";
     if(inicio==false){document.write(sair);}
     else{ window.alert('Que comece o QuizzHP, Clique em Ok abaixo para começar (obs: apenas use letras minusculas e espaços^^!)');
     //Inicio do quiz
-    var certo = "<b>Correto!</b>"; var errado = "<b style='color:red;'>Errado!</b>";var o = new Array();
+    var certo = "<b style='color:#4bff01;'>Correta</b>"; var errado = "<b style='color:red;'>Incorreta</b>";var o = new Array();
     var acertos=0; var erros=0; var respostas = new Array(); var p = new Array();var r = new Array();
     var t=10; //COLOQUE AQUI TOTAL DE PERGUNTAS DO QUIZ !!!!
     // LISTA DE PERGUNTAS
@@ -58,21 +28,21 @@ color:black;
     p[2] = "Qual o nome completo do pai de Snape";
     r[2] = 'tobias snape';
     p[3] = "Em que ano foi iniciada a 1º Guerra Mundial?";
-    r[3] = 1914;
+    r[3] = 1;
     p[4] = "Em que ano terminou a 1º Guerra Mundial?";
-    r[4] = 1918;
+    r[4] = 1;
     p[5] = "Em que ano foi iniciada a 2º Guerra Mundial?";
-    r[5] = 1939;
+    r[5] = 1;
     p[6] = "Em que ano terminou a 2º Guerra Mundial?";
-    r[6] = 1945;
+    r[6] = 1;
     p[7] = "Qual e o único numero primo que é par?";
-    r[7] = 2;
+    r[7] = 1;
     p[8] = "Qual deve ser a medida do ângulo de um triangulo equilátero?";
-    r[8] = 60;
+    r[8] = 1;
     p[9] = "Quantos nomes tinha D. Pedro I?";
-    r[9] = 18;
+    r[9] = 1;
     p[10] = "Quantos nomes tinha D. Pedro II?";
-    r[10] = 15;
+    r[10] = 1;
  
     //ADICIONE MAIS PERGUNTAS AQUI COPIANDO 2 EM 2 LINHAS: P[] = PERGUNTA R[] = RESPOSTA
      for(var i=1;i<=t;i++){o[i] = i;} //gera uma sequencia de t numeros
@@ -92,24 +62,37 @@ color:black;
        if(respostas[o[i]]==r[o[i]]){respostas[o[i]]=certo;acertos++;}else{respostas[o[i]]=errado;erros++;}
 
      }
-{if(0>acertos<=2)
-document.write("lerdo!"),document.write('<img src="img/trouxa.jpg">');
+{
+if(acertos==0)
+document.write('<img src="img/sangueruim.jpg">');
 }
-{if(acertos==3)
-document.write("pouco lerdo!"),document.write('<img src="img/ask.jpg">');
+{if(acertos>0&&acertos<4)
+document.write('<img src="img/trouxa.jpg">');
+}
+{if(acertos>=4&&acertos<7)
+document.write('<img src="img/meiobruxomeiotrouxa.jpg">');
+}
+{if(acertos>=7&&acertos<=9)
+document.write('<img src="img/bruxo.jpg">');
+}
+
+{if(acertos==10)
+document.write('<img src="img/bruxoexcellent.jpg">');
 }
     //fim do quiz
-    document.write("HP Quiz<br><br>Suas respostas:<br><br>");
+  
     document.write("<ol>");
-   document.write("<p style='color:red'>text</p>");
+    //document.write("<p style='color:red'>text</p>");
     for(var i=1;i<=t;i++)
     {
-    document.write("<li>"+respostas[o[i]]);}
+
+    document.write("<li >"+respostas[o[i]]);}
     document.write("</ol>");
     document.write("<br>Total de acertos: "+acertos);
     document.write("<br>Total de erros: "+erros);
-    document.write("<br><br><input type=button value='Respostas' Onclick=javascript:if(document.getElementById('rp').style.display=='none'){document.getElementById('rp').style.display='block';}else{document.getElementById('rp').style.display='none';}>");
+    document.write("<br><br><input type=button value='Confira as respostas' Onclick=javascript:if(document.getElementById('rp').style.display=='none'){document.getElementById('rp').style.display='block';}else{document.getElementById('rp').style.display='none';}>");
     document.write("<br><div id='rp' class='rp' style='display:none;'><ol>");
+
     for(var i=1;i<=t;i++)
      { document.write("<li>"+p[o[i]]+"<br>R:"+r[o[i]]);}
     document.write("</ol></div>");
